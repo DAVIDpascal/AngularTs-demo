@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular Typescript Demo</title>
+    <script src="script/angular.js"></script>
+    <script src="script/main.js"></script>
+</head>
+<body>
+<header>
+    <h1>Angular TypeScript demo - with Planets</h1>
+</header>
+
+<div ng-app="planetsModule">
+    <section ng-controller="PlanetsController as planetsController">
+        <input ng-model="planetsController.filter" />
+        <ul>
+            <li ng-repeat="planet in planetsController.planetsFiltered" planet-color="planet">{{planet.name}}</li>
+        </ul>
+
+    </section>
+</div>
+
+</body>
+</html>
